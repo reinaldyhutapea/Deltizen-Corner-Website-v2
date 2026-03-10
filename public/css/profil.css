@@ -1,0 +1,25 @@
+.container-fluid{
+    padding: 20px;
+}
+
+.card-body{
+    padding: 30px;
+ 
+}
+
+.card-body > .img{
+    margin: 0 auto;
+}
+
+.card-body > .table{
+    margin: 0 auto;
+}
+
+.img{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(170, 183, 208);
+    border-radius: 50%;
+    padding: 10px;
+}
+

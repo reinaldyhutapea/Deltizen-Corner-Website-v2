@@ -1,0 +1,736 @@
+/**
+ * Deltizen Corner - Premium Light Elegant Design
+ * Custom CSS for a professional, bright, and high-end cafe appearance
+ */
+
+/* ==========================================
+   ROOT VARIABLES - Premium Light Theme
+   ========================================== */
+:root {
+    /* Primary Colors (Pristine Light) */
+    --dc-primary: #ffffff;
+    --dc-primary-light: #f8fafc;
+    --dc-primary-lighter: #f1f5f9;
+    --dc-primary-dark: #0f172a; /* Used for dark text/elements */
+    
+    /* Accent Colors (Premium Champagne Gold) */
+    --dc-accent: #c29b62;        /* Champagne Gold */
+    --dc-accent-light: #dce48;   /* Lighter Gold/Vanilla */
+    --dc-accent-dark: #9c7b4b;   /* Deep Gold */
+    --dc-accent-glow: rgba(194, 155, 98, 0.2);
+    
+    /* Semantic Colors */
+    --dc-danger: #ef4444;
+    --dc-success: #10b981;
+    --dc-warning: #f59e0b;
+    --dc-info: #3b82f6;
+    
+    /* Text Colors */
+    --dc-text: #1e293b;          /* Dark Slate for readability */
+    --dc-text-light: #64748b;    /* Elegant muted gray for secondary text */
+    --dc-text-dark: #0f172a;     /* Pure dark */
+    
+    /* Neutral Colors / Backgrounds */
+    --dc-white: #ffffff;
+    --dc-surface: #ffffff;       /* Card backgrounds */
+    --dc-surface-hover: #f1f5f9;
+    --dc-border: rgba(0, 0, 0, 0.08);
+    --dc-glass: rgba(255, 255, 255, 0.85);
+    
+    /* Shadows - Soft and elegant */
+    --dc-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+    --dc-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --dc-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    --dc-shadow-glow: 0 0 15px var(--dc-accent-glow);
+    
+    /* Border Radius - Sleek */
+    --dc-radius-sm: 6px;
+    --dc-radius-md: 12px;
+    --dc-radius-lg: 20px;
+    --dc-radius-full: 9999px;
+    
+    /* Transitions */
+    --dc-transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --dc-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --dc-transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Override Bootstrap/Template Colors */
+    --background-color: var(--dc-primary);
+    --default-color: var(--dc-text);
+    --heading-color: var(--dc-primary-dark);
+    --accent-color: var(--dc-accent);
+    --surface-color: var(--dc-surface);
+    --contrast-color: var(--dc-white);
+    --nav-color: var(--dc-text);
+    --nav-hover-color: var(--dc-accent);
+}
+
+/* ==========================================
+   GLOBAL STYLES & LAYOUT
+   ========================================== */
+body {
+    background-color: var(--dc-primary);
+    color: var(--dc-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Selection color */
+::selection {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+}
+
+/* Elegant Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--dc-primary-dark);
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--dc-accent);
+    text-decoration: none;
+    transition: var(--dc-transition);
+}
+
+a:hover {
+    color: var(--dc-accent-dark);
+    text-decoration: none;
+}
+
+/* Glassmorphism Backgrounds for Sections */
+.light-background {
+    background-color: var(--dc-primary-light) !important;
+}
+
+.section {
+    padding: 100px 0;
+    position: relative;
+}
+
+/* Subtle noise texture background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ==========================================
+   HEADER - Glassmorphism & Sleek
+   ========================================== */
+.header {
+    background: var(--dc-glass) !important;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--dc-border);
+    padding: 15px 0;
+    transition: var(--dc-transition);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 997;
+}
+
+.header.scrolled {
+    padding: 10px 0;
+    box-shadow: var(--dc-shadow-md);
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.header .logo h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--dc-primary-dark);
+    letter-spacing: -0.04em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.header .logo span {
+    color: var(--dc-accent);
+}
+
+/* Navigation */
+.navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navmenu ul li {
+    position: relative;
+}
+
+.navmenu ul li a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dc-text);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--dc-transition);
+    position: relative;
+}
+
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+    color: var(--dc-accent);
+}
+
+/* Subtle underline animation for active links */
+.navmenu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--dc-accent);
+    transition: var(--dc-transition);
+    transform: translateX(-50%);
+}
+
+.navmenu ul li a:hover::after,
+.navmenu ul li a.active::after {
+    width: calc(100% - 40px);
+}
+
+/* CTA Button in Header */
+.header .btn-getstarted {
+    background: transparent;
+    border: 1px solid var(--dc-accent);
+    color: var(--dc-accent);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 10px 24px;
+    border-radius: var(--dc-radius-full);
+    transition: var(--dc-transition);
+    margin-left: 20px;
+}
+
+.header .btn-getstarted:hover {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+    box-shadow: var(--dc-shadow-glow);
+    transform: translateY(-2px);
+}
+
+/* Custom Dropdown Styling for Light Theme */
+.navmenu .dropdown ul {
+    background: var(--dc-surface);
+    border: 1px solid var(--dc-border);
+    border-radius: var(--dc-radius-md);
+    box-shadow: var(--dc-shadow-lg);
+    padding: 10px 0;
+}
+.navmenu .dropdown ul a {
+    color: var(--dc-text);
+    padding: 10px 20px;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.navmenu .dropdown ul a:hover {
+    background: var(--dc-surface-hover);
+    color: var(--dc-accent);
+}
+
+/* Header Spacer to prevent content overlapping */
+main { margin-top: 80px; }
+
+/* ==========================================
+   HERO SECTION - Elegant Minimal
+   ========================================== */
+.hero.section {
+    background: radial-gradient(circle at 100% 0%, var(--dc-primary-lighter) 0%, var(--dc-primary) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 100px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+/* Abstract accent shapes in background */
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--dc-accent-glow) 0%, transparent 60%);
+    top: -200px;
+    right: -200px;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--dc-primary-dark);
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, var(--dc-accent) 0%, var(--dc-accent-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: var(--dc-text-light);
+    max-width: 550px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.hero .btn-get-started,
+.btn-get-started {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dc-accent);
+    color: var(--dc-white);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 16px 36px;
+    border-radius: var(--dc-radius-full);
+    transition: var(--dc-transition);
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .btn-get-started:hover,
+.btn-get-started:hover {
+    background: var(--dc-accent-dark);
+    box-shadow: var(--dc-shadow-glow);
+    transform: translateY(-3px);
+    color: var(--dc-white);
+}
+
+.hero .btn-get-started i, .btn-get-started i {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.hero .btn-get-started:hover i, .btn-get-started:hover i {
+    transform: translateX(4px);
+}
+
+.hero-img img {
+    border-radius: var(--dc-radius-md);
+    box-shadow: var(--dc-shadow-lg);
+    position: relative;
+    z-index: 2;
+    border: 1px solid var(--dc-border);
+}
+
+/* Subtle image glow effect */
+.hero-img::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 90%; height: 90%;
+    transform: translate(-50%, -50%);
+    background: var(--dc-accent);
+    filter: blur(80px);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* ==========================================
+   SECTION TITLES - Elegant Light
+   ========================================== */
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--dc-text-light);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: var(--dc-primary-dark);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.section-title p span {
+    color: var(--dc-accent);
+    font-weight: 300;
+}
+
+/* ==========================================
+   MENU SECTION - Beautiful Cards
+   ========================================== */
+.menu-filters {
+    padding: 0;
+    margin: 0 auto 40px auto;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu-filters li {
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background: var(--dc-surface);
+    border: 1px solid var(--dc-border);
+    border-radius: 50%;
+    color: var(--dc-text);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--dc-transition);
+    box-shadow: var(--dc-shadow-sm);
+}
+
+.menu-filters li i {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--dc-text-light);
+    transition: var(--dc-transition);
+}
+
+.menu-filters li:hover, .menu-filters li.filter-active {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+    border-color: var(--dc-accent);
+    box-shadow: var(--dc-shadow-glow);
+    transform: translateY(-5px);
+}
+
+.menu-filters li:hover i, .menu-filters li.filter-active i {
+    color: var(--dc-white);
+}
+
+/* Menu Item Cards */
+.menu-item {
+    background: var(--dc-surface);
+    border: 1px solid var(--dc-border);
+    border-radius: var(--dc-radius-md);
+    padding: 20px;
+    text-align: center;
+    transition: var(--dc-transition);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--dc-shadow-sm);
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--dc-shadow-lg);
+    border-color: rgba(0,0,0,0.15);
+}
+
+.menu-item .menu-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--dc-radius-sm);
+    margin-bottom: 20px;
+    transition: var(--dc-transition-slow);
+}
+
+.menu-item:hover .menu-img {
+    transform: scale(1.05);
+}
+
+.menu-item h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--dc-primary-dark);
+}
+
+.menu-item .ingredients {
+    font-size: 14px;
+    color: var(--dc-text-light);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.menu-item .price {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--dc-accent);
+    margin-bottom: 25px;
+}
+
+.menu-item .btn-get-started {
+    padding: 12px 20px;
+    font-size: 13px;
+    width: 100%;
+    background: var(--dc-primary-light);
+    color: var(--dc-primary-dark);
+    border: 1px solid var(--dc-border);
+}
+
+.menu-item:hover .btn-get-started {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+    border-color: var(--dc-accent);
+}
+
+/* ==========================================
+   FEATURE CARDS
+   ========================================== */
+.card {
+    background: var(--dc-surface);
+    border: 1px solid var(--dc-border);
+    border-radius: var(--dc-radius-md);
+    box-shadow: var(--dc-shadow-sm);
+    transition: var(--dc-transition);
+}
+
+.card:hover {
+    box-shadow: var(--dc-shadow-md);
+    transform: translateY(-5px);
+}
+
+.card h4 {
+    color: var(--dc-primary-dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card .text-muted {
+    color: var(--dc-text-light) !important;
+}
+
+/* ==========================================
+   CART & INVOICE
+   ========================================== */
+.table th, .table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--dc-border);
+    color: var(--dc-text);
+    background-color: transparent !important;
+}
+
+.table thead th {
+    background: var(--dc-primary-light) !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: var(--dc-text-light);
+    border-bottom: 2px solid var(--dc-border);
+}
+
+.cart-summary, .invoice-card {
+    background: var(--dc-surface);
+    border: 1px solid var(--dc-border);
+    border-radius: var(--dc-radius-md);
+    padding: 30px;
+    box-shadow: var(--dc-shadow-md);
+}
+
+/* ==========================================
+   BUTTONS (General)
+   ========================================== */
+.btn {
+    border-radius: var(--dc-radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: none;
+    transition: var(--dc-transition);
+}
+
+.btn-primary {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+}
+
+.btn-primary:focus, .btn-primary:active, .btn-primary:hover {
+    background: var(--dc-accent-dark) !important;
+    color: var(--dc-white) !important;
+    box-shadow: var(--dc-shadow-glow) !important;
+}
+
+.btn-success { background: var(--dc-success); color: #fff; }
+.btn-danger { background: var(--dc-danger); color: #fff; }
+.btn-warning { background: var(--dc-warning); color: #fff; }
+.btn-outline-secondary { border-color: var(--dc-border); color: var(--dc-text); }
+.btn-outline-secondary:hover { background: var(--dc-text); color: var(--dc-white); border-color: var(--dc-text); }
+
+/* ==========================================
+   FORMS - Premium Light Inputs
+   ========================================== */
+.form-control, .form-select {
+    background-color: var(--dc-white);
+    border: 1px solid var(--dc-border);
+    color: var(--dc-text);
+    border-radius: var(--dc-radius-sm);
+    padding: 12px 15px;
+    transition: var(--dc-transition);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02) inset;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--dc-white);
+    color: var(--dc-text);
+    border-color: var(--dc-accent);
+    box-shadow: 0 0 0 4px rgba(194, 155, 98, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: var(--dc-text-light);
+}
+
+.form-label {
+    color: var(--dc-text);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* ==========================================
+   FOOTER - Crisp Light
+   ========================================== */
+.footer {
+    background: var(--dc-primary-light);
+    border-top: 1px solid var(--dc-border);
+    color: var(--dc-text);
+    padding: 80px 0 30px;
+}
+
+.footer h4 {
+    color: var(--dc-primary-dark);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+}
+
+.footer .icon {
+    color: var(--dc-accent);
+    font-size: 24px;
+    margin-top: -5px;
+}
+
+.footer .social-links a {
+    background: var(--dc-white);
+    border: 1px solid var(--dc-border);
+    color: var(--dc-text-light);
+    width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    transition: var(--dc-transition);
+}
+
+.footer .social-links a:hover {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+    border-color: var(--dc-accent);
+    box-shadow: var(--dc-shadow-glow);
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   MISC
+   ========================================== */
+.pagination .page-link {
+    background-color: var(--dc-surface);
+    border-color: var(--dc-border);
+    color: var(--dc-text);
+    font-weight: 600;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--dc-accent);
+    border-color: var(--dc-accent);
+    color: var(--dc-white);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--dc-primary-light);
+    color: var(--dc-accent);
+}
+
+.scroll-top {
+    background: var(--dc-accent);
+    color: var(--dc-white);
+}
+.scroll-top:hover {
+    background: var(--dc-accent-dark);
+    color: var(--dc-white);
+}
+
+.alert-success { background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16,185,129,0.3); }
+.alert-danger { background: rgba(239, 68, 68, 0.1); color: #b91c1c; border: 1px solid rgba(239,68,68,0.3); }
+
+/* Responsive */
+@media (max-width: 991px) {
+    .header .btn-getstarted { display: none; }
+    .navmenu ul { background: var(--dc-surface); border-top: 1px solid var(--dc-border); }
+    .navmenu ul li a { color: var(--dc-text); }
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation: fadeInUp 1s ease-out;
+}

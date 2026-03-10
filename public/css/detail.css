@@ -1,0 +1,61 @@
+.container-fluid{
+  
+}
+
+.card{
+    padding: 15px;
+}
+
+.card-header > h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.desc{
+    margin-left: 30px;
+    
+}
+
+.title > h1{
+ font-size: 30px;
+ font-weight: 700;
+ 
+}
+
+.harga > h2{
+font-weight: 500;   
+margin-top: 10px;
+font-size: 18px;
+}
+
+.harga > p{
+font-size: 14px;
+}
+
+.deskripsi > p{
+    font-size: 14px;
+}
+.deskripsi > h2{
+   font-weight: 500;
+   margin-top: 10px;
+   font-size: 18px;
+}
+
+.category > h2{
+ font-weight: 500;
+ margin-top: 10px;
+ font-size: 18px;
+}
+.category > p{
+    font-size: 14px;
+}
+
+.stok > h2{
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.stok > p{
+    font-size: 14px;
+}
+

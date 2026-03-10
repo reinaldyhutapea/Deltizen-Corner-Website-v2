@@ -1,0 +1,43 @@
+
+      .konten{
+        padding: 50px;
+    }
+    .card{
+      left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+  width: 65rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    }
+
+@media screen and (max-width: 600px) {
+
+  span.logo.navLogo{
+    display: none;
+}
+
+.searchBox{
+    display: none;
+}
+
+body.dark .card-header h3{
+  color: white;
+}
+body.dark .card{
+  background-color: #18191A;
+  color: white;
+  border : 1.5px solid rgb(255, 255, 255);
+}
+
+.card{
+    position: relative;
+    width:100%;
+    height: 20.5rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    margin-bottom: 15px;
+}
+}

@@ -1,0 +1,342 @@
+body.dark {
+    --body-color: #18191A;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    --search-bar: #242526;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+    min-height: calc(100vh - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    position: relative;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: .875rem;
+    font-weight: 500;
+    letter-spacing: .0892857em;
+    line-height: normal;
+    min-width: 64px;
+    position: relative;
+    text-decoration: none;
+}
+
+.card {
+    position: relative; /* ubah absolute jadi relative */
+    margin: 80px auto; /* mengurangi margin untuk menaikkan posisi */
+    width: 80rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    padding: 20px;
+}
+
+
+.cartImg {
+    height: 50px;
+    width: 50px;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.quantity {
+    display: inline-block;
+}
+
+.qty .fa-solid,
+.fas {
+    font-size: 20px;
+    color: rgb(133, 133, 133);
+}
+
+.qty .fa-solid:hover,
+.fas {
+    color: rgb(70, 70, 70);
+}
+
+.qty .fa-solid:active,
+.fas {
+    transform: rotate(180deg);
+    transition: transform 100ms linear;
+}
+
+input:hover,
+input:focus {
+    background-color: rgb(248, 244, 244);
+}
+
+.action {
+    position: relative;
+
+}
+
+.btn1 {
+    position: absolute;
+    right: 0px;
+    width: 110px;
+    background-color:none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn2 {
+    position: absolute;
+    right: 120px;
+    width: 50px;
+    background-color: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.btn1:hover,
+.btn2:hover {
+    background: none;
+    color: white;
+}
+
+.menu-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* start darkmode */
+
+    body.dark h1 {
+        color: white;
+    }
+
+    body.dark .card2 {
+        background-color: #18191A;
+        border: 1.5px solid rgb(255, 255, 255);
+    }
+
+
+    body.dark .right h3 {
+        color: white;
+    }
+
+    body.dark .right p {
+        color: white;
+    }
+
+    body.dark .right form .btn i {
+        color: white;
+    }
+
+    body.dark .right form .btn i {
+        color: white;
+    }
+
+    body.dark form i {
+        color: white;
+    }
+
+    body.dark .right form .fa-solid:hover,
+    .fas {
+        color: rgb(255, 255, 255);
+    }
+
+    body.dark .right form .fa-solid:active,
+    .fas {
+        transform: rotate(180deg);
+        transition: transform 100ms linear;
+    }
+
+    body.dark .card3 {
+        background-color: #18191A;
+        border: 1.5px solid rgb(255, 255, 255);
+    }
+
+    body.dark .card3,
+    hr {
+        color: rgb(255, 255, 255);
+    }
+
+
+    /* end darkmode */
+
+    span.logo.navLogo {
+        display: none;
+    }
+
+    .searchBox {
+        display: none;
+    }
+
+
+    .menu-web {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .card2 {
+        position: relative;
+        padding: 15px;
+        width: 100%;
+        height: 7.5rem;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+        margin-bottom: 15px;
+    }
+
+    .left {
+        position: absolute;
+    }
+
+    .left .cartImg {
+        height: 85px;
+        width: 85px;
+    }
+
+    .right {
+        position: absolute;
+        left: 7rem;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .close {
+        float: right;
+
+
+    }
+
+    /* startv2 */
+
+    /* start card3 */
+
+    .card3 {
+
+        padding: 20px;
+        height: 13rem;
+        width: 100%;
+        right: 11px;
+        left: 0px;
+        bottom: auto;
+        bottom: 0px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+        background-color: rgb(145, 145, 145);
+    }
+
+    .card3,
+    .title,
+    .subtitle {
+        color: white;
+    }
+
+    .card3,
+    hr {
+        color: black;
+    }
+}
+
+.footer {
+    background: linear-gradient(135deg, #BFE1BD);
+    color: #000000;
+    padding: 30px 20px 15px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    padding-bottom: 30px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #000000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer p {
+    margin: 10px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: #796824;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+        margin-top: 25px;
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+/* Agar footer selalu di bawah jika konten sedikit */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.wrapper {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}

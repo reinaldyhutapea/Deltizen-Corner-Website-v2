@@ -1,0 +1,116 @@
+.card{
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+justify-content: center;
+width: 65rem;
+background-color: white;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+body.dark .card{
+    background-color: #18191A;
+    border : 1.5px solid rgb(255, 255, 255);
+    color: white;
+}
+
+
+.row>.left{
+width: 320px;
+}
+.row>.right{
+width: 450px;
+padding-left: 50px;
+margin-top: 50px;
+
+}
+footer{
+display: none;
+}
+td.title{
+font-size: 25px;
+font-weight: 500;
+padding-right: 20px;
+}
+td.title span{
+padding-left: 20px;
+
+}
+.buton{
+background-color: rgb(38, 45, 239);
+border-radius: 5px ;
+padding-right:10px;
+padding-left:10px;
+padding-top:5px;
+padding-bottom:5px;
+
+}
+.mobile-ui{
+display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .buton{
+        background-color: rgb(38, 45, 239);
+        border-radius: 5px 5px 0px 0px;
+        padding-right:10px;
+        padding-left:10px;
+        padding-top:5px;
+        padding-bottom:5px;
+        
+        }
+
+body.dark .card{
+    background-color: #18191A;
+    border : 1.5px solid rgb(255, 255, 255);
+}
+
+body.dark .card-header{
+    color: white;
+}
+body.dark .card-body{
+    color: white;
+
+}
+
+.web-ui{
+    display: none;
+}
+
+.mobile-ui{
+    display: block;
+}
+
+.card{
+    width: 100%;
+
+}
+
+span.logo.navLogo{
+    display: none;
+}
+
+.searchBox{
+    display: none;
+}
+
+.left{
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+.right{
+   margin-left: 25px;
+}
+
+td.title{
+    font-size: 18px;
+}
+
+.subtitle{
+    font-size: 20px;
+}
+    
+}

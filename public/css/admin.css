@@ -1,0 +1,8 @@
+ul.navbar-nav.ml-auto{
+    float: right;
+}
+
+.nav-item > .nav-link > i{
+font-size: 20px;
+margin-right: 10px;
+}

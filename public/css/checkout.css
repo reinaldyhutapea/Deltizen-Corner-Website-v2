@@ -1,0 +1,147 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.card {
+    background: #fff;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 0; /* Ubah jadi persegi panjang */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    background-color: #f1f1f1;
+    padding: 16px 24px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 20px 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background-color: #f0fff5;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#pickupNowButton {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pickupNowButton:hover {
+    background-color: #0056b3;
+}
+
+.total-price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 10px 0 20px;
+}
+
+.total-price span {
+    font-weight: bold;
+    color: #000;
+}
+
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px 20px;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-back {
+    background-color: #0088ff;
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
+.btn-submit {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+
+/* Tombol */
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+/* Footer tetap di bawah */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
